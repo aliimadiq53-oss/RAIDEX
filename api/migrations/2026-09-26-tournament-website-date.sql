@@ -1,0 +1,2 @@
+ALTER TABLE tournaments
+  ADD COLUMN IF NOT EXISTS website_target_date VARCHAR(30) DEFAULT NULL;

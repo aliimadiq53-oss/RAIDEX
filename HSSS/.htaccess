@@ -1,0 +1,10 @@
+Options -Indexes
+RewriteEngine On
+
+# Keep API files and generated assets accessible as files/directories.
+RewriteCond %{REQUEST_FILENAME} -f [OR]
+RewriteCond %{REQUEST_FILENAME} -d
+RewriteRule ^ - [L]
+
+# Let React Router handle clean client-side routes such as /admin and /display.
+RewriteRule ^ index.html [L]
